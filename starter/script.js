@@ -80,6 +80,7 @@ bmw.accelerate();
 ///////////////////////////////////////
 */
 
+/*
 ///////////////////////////////////////
 //class expression
 // const PersonCl = class {};
@@ -91,12 +92,29 @@ class PersonCl {
     this.birthYear = birthYear;
   }
 
-  colcAge() {
-    console.log(2037 - this.birthYear);
+  //Method will be added to .prototype property
+  calcAge() {
+    console.log(2025 - this.birthYear);
+  }
+  greet() {
+    console.log(`Hey ${this.firstName}`);
   }
 }
-console.log(PersonCl.prototype);
-const jessica = new PersonCl('jessica', 1995);
-console.log(jessica);
 
-jessica.colcAge();
+const jessica = new PersonCl('Jessica', 1995);
+console.log(jessica);
+jessica.calcAge();
+
+console.log(jessica.__proto__ === PersonCl.prototype);
+
+// PersonCl.prototype.greet = function () {
+//   console.log(`Hey ${this.firstName}`);
+// };
+
+jessica.greet();
+
+// 1. classes are not hoisted
+// 2. classes are first-class citizes
+// 3. classes are executed in strict mode
+///////////////////////////////////////
+*/
