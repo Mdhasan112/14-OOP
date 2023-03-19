@@ -305,3 +305,50 @@ tesla.brake();
 tesla.accelerate();
 ///////////////////////////////////////
 */
+
+/*
+///////////////////////////////////////
+//Inheritance Between "Classes": ES6 Classes
+
+class PersonCl {
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
+    this.birthYear = birthYear;
+  }
+
+  //Method will be added to .prototype property
+  calcAge() {
+    console.log(2025 - this.birthYear);
+  }
+  greet() {
+    console.log(`Hey ${this.fullName}`);
+  }
+}
+
+class studentC1 extends PersonCl {
+  constructor(fullName, birthYear, course) {
+    //Always need to happen first!
+    super(fullName, birthYear);
+    this.course = course;
+  }
+
+  introduce() {
+    console.log(`My name is ${this.fullName} and I study ${this.course}`);
+  }
+
+  calcAge() {
+    console.log(
+      `I am ${2030 - this.birthYear} years old bt i feel like ${
+        2030 - this.birthYear + 10
+      }`
+    );
+  }
+}
+
+// const martha = new studentC1('Martha', 2010);
+const martha = new studentC1('Martha', 2010, 'Computer Science');
+console.log(martha);
+martha.introduce();
+martha.calcAge();
+///////////////////////////////////////
+*/
