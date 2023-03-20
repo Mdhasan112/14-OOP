@@ -387,3 +387,35 @@ jay.introduce();
 jay.calcAge();
 ///////////////////////////////////////
 */
+
+/*
+///////////////////////////////////////
+class Account {
+  constructor(owner, currency, pin) {
+    this.owner = owner;
+    this.currency = currency;
+    this.pin = pin;
+    this.movements = [];
+
+    console.log(`Thanks for opening an account, ${owner}`);
+  }
+
+  //Public interface
+  deposit(val) {
+    this.movements.push(val);
+  }
+  withdraw(val) {
+    this.deposit(-val);
+  }
+}
+
+const acc1 = new Account('Jonas', 'EURO', 1111);
+
+// acc1.movements.push(150);
+// acc1.movements.push(-140);
+acc1.deposit(150);
+acc1.withdraw(140);
+
+console.log(acc1);
+///////////////////////////////////////
+*/
