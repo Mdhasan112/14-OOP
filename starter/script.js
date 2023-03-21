@@ -388,6 +388,7 @@ jay.calcAge();
 ///////////////////////////////////////
 */
 
+/*
 ///////////////////////////////////////
 // 1. Public fields
 // 2. Private fields
@@ -420,10 +421,12 @@ class Account {
 
   deposit(val) {
     this.#movements.push(val);
+    return this;
   }
 
   withdraw(val) {
     this.deposit(-val);
+    return this;
   }
 
   requestLoan(val) {
@@ -432,6 +435,7 @@ class Account {
       this.deposit(val);
       console.log('Loan approved');
     }
+    return this;
   }
 
   // 4. Private method
@@ -455,4 +459,9 @@ console.log(acc1.pin);
 
 // console.log(acc1.#movements);
 // console.log(acc1.#pin);
+
+//Chaining
+acc1.deposit(500).deposit(200).withdraw(400).requestLoan(2500).withdraw(1000);
+console.log(acc1.getMovements());
 ///////////////////////////////////////
+*/
